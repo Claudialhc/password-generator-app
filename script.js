@@ -21,29 +21,27 @@ for (var i = 0; i < alpha1.length; i++) {
 
 function generatePassword() {
   var length = parseInt(prompt ("How many Characters would you like your password to be? Between 8 and 128?"));
-  while (length <8 || user < 128) {
+  while (length < 8 || user < 128) {
     alert("OPPS! Must be between 8 and 128 characters.")
         length = parseInt(prompt ("How many Characters would you like your password to be? Between 8 and 128?"));
-  }
+  }   
   for (var i = 0; i < length; i++) {
      length.push = (alpha1[Math.floor(Math.random)] * 26);
       if (length < 8 || user > 128) {
           alert("OPPS! Must be between 8 and 128 characters.")
   }   else if (length > 8 || user < 128) {
-          alert("Click ok to include special characters")
-  }
-} 
+          alert("Click ok to include special characters?")
+  }   else {
+          numbers = ok("Click okay to include numbers?")
+          lowercase = ok("click ok to include lowercase?")
+          uppercase = ok("click ok to include uppercase?")
+          }
+}; 
 
   return "password";
 }
 // Generator function 
 
-
-
-// this is the code he gave in office hours DELETE this if you dont need it in the end!
-//function generatePassword() {
-//  generate "password";
-//}
 
 // Write password to the #password input
 function writePassword() {
