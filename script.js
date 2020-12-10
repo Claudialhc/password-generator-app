@@ -26,17 +26,17 @@ function generatePassword() {
         length = parseInt(prompt ("How many Characters would you like your password to be? Between 8 and 128?"));
   }   
   for (var i = 0; i < length; i++) {
-     length.push = (alpha1[Math.floor(Math.random)] * 26);
+     length.push = (alpha1[Math.floor(Math.random)] * alpha1); //originally was 2 x26 instead of alpha1 change if needed
       if (length < 8 || user > 128) {
-          alert("OPPS! Must be between 8 and 128 characters.")
-  }   else if (length > 8 || user < 128) {
-          alert("Click ok to include special characters?")
-  }   else {
-          numbers = ok("Click okay to include numbers?")
-          lowercase = ok("click ok to include lowercase?")
-          uppercase = ok("click ok to include uppercase?")
-          }
-}; 
+          alert("OPPS! Must be between 8 and 128 characters.");
+  }   if (length > 8 || user < 128) {
+          alert("Click ok to include special characters?");
+  }   if ("Click ok to include special charactera?") { //how do I get this one to loop in ? another while loop?
+          return alert("Click ok to include numbers?")
+        }
+      }; 
+      //lowercase = ok("click ok to include lowercase?")
+      //uppercase = ok("click ok to include uppercase?")
 
   return "password";
 }
